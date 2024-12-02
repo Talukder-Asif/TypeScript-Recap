@@ -7,7 +7,9 @@ const courseCode: number[] = [3101, 3102, 3103, 3104]; // Array
 const info: [string, string, null, number, number] = ["name", "isMarried", null, 122, 124] //Tupple
 
 
-// Type
+// 
+
+// Type Aliases
 type Person = {
     name: string,
     age: number,
