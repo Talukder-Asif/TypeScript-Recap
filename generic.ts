@@ -23,12 +23,24 @@
     BadHavit: null,
   };
 
-  console.log(Person)
+  console.log(Person);
 
-
-//   Generetic in function
-const showMsg = <T>(msg: T) =>{
+  //   Generetic in function
+  const showMsg = <T>(msg: T) => {
     return msg;
-}
-console.log(showMsg<string>("Hello World!"))
+  };
+  console.log(showMsg<string>("Hello World!"));
+
+  // 2nd function with Generic
+  const showMsg1 = <T, P, Q>(msg1: T, msg2: P, personInfo: Q) => {
+    return { msg1, msg2, personInfo };
+  };
+
+  console.log(
+    showMsg1<string, string, IPerson<number, null>>(
+      "Hello World!",
+      "Hello from the other side",
+      Person
+    )
+  );
 }
